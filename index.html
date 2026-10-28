@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стоматология «Белый ключ» – лечение, имплантация, гигиена</title>
+  <meta name="description" content="Стоматология «Белый ключ»: лечение кариеса, имплантация, профессиональная гигиена и детская стоматология. Запись в день обращения.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+  <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+  <div class="topbar bg-dark text-white py-2 d-none d-md-block">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6"><small>Москва, ул. Примерная, 12 · Ежедневно 9:00–21:00</small></div>
+        <div class="col-md-6 text-md-end">
+          <a href="tel:+74951234567" class="text-white text-decoration-none fw-semibold">+7 (495) 123-45-67</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="bg-white border-bottom py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-8 col-md-6">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <span class="brand-mark me-2">БК</span>
+            <span>
+              <span class="d-block fw-bold text-dark">Белый ключ</span>
+              <small class="text-muted d-none d-sm-block">Стоматология для всей семьи</small>
+            </span>
+          </a>
+        </div>
+        <div class="col-4 col-md-6 text-end">
+          <a href="order.html" class="btn btn-clinic d-none d-md-inline-block">Записаться на приём</a>
+          <a href="order.html" class="btn btn-clinic btn-sm d-md-none">Запись</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАВИГАЦИЯ (без пункта «Услуга») -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Запись</a></li>
+          <li class="nav-item"><a class="nav-link" href="#doctors">Врачи</a></li>
+        </ul>
+        <a href="tel:+74951234567" class="btn btn-outline-clinic btn-sm d-lg-none mt-2">Позвонить: +7 (495) 123-45-67</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="container py-5">
+        <div class="row align-items-center g-5">
+          <div class="col-12 col-lg-6">
+            <span class="badge bg-light text-clinic mb-3">Стоматология в Москве</span>
+            <h1 class="display-5 fw-bold mb-3">Здоровые зубы<br>без страха и боли</h1>
+            <p class="lead text-muted mb-4">
+              Лечение, имплантация и профилактика для взрослых и детей.
+              Современное оборудование, бережный подход и запись в день обращения.
+            </p>
+            <div class="d-flex gap-3 flex-wrap">
+              <a href="order.html" class="btn btn-clinic btn-lg">Записаться на приём</a>
+              <a href="tel:+74951234567" class="btn btn-outline-secondary btn-lg">+7 (495) 123-45-67</a>
+            </div>
+            <div class="row g-3 mt-4">
+              <div class="col-4"><div class="fw-bold fs-5">12+</div><small class="text-muted">лет на рынке</small></div>
+              <div class="col-4"><div class="fw-bold fs-5">8</div><small class="text-muted">врачей</small></div>
+              <div class="col-4"><div class="fw-bold fs-5">15 000+</div><small class="text-muted">пациентов</small></div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6">
+            <img src="images/hero-clinic.jpg" alt="Приём в стоматологии «Белый ключ»"
+                 class="img-fluid rounded shadow-sm w-100 hero-img"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="placeholder-box rounded shadow-sm align-items-center justify-content-center" style="display:none;">
+              <span class="text-muted">Фото клиники / приёма</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СРОЧНАЯ ПОМОЩЬ -->
+    <section class="container my-4">
+      <div class="urgent-bar d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 p-4 rounded">
+        <div>
+          <div class="fw-bold mb-1">Острая зубная боль?</div>
+          <div class="text-muted small">Принимаем в день обращения – позвоните, и мы найдём время.</div>
+        </div>
+        <a href="tel:+74951234567" class="btn btn-warning fw-semibold">Позвонить сейчас: +7 (495) 123-45-67</a>
+      </div>
+    </section>
+
+    <!-- ПРЕИМУЩЕСТВА -->
+    <section class="container my-5">
+      <h2 class="text-center mb-2">Почему выбирают «Белый ключ»</h2>
+      <p class="text-center text-muted mb-5">Заботимся о вашей улыбке на каждом этапе</p>
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="feature-icon">🦷</div>
+            <h3 class="h5 mt-3">Современное оборудование</h3>
+            <p class="mb-0 text-muted">Цифровая диагностика, микроскопы и безопасные материалы последнего поколения.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="feature-icon">👩‍⚕️</div>
+            <h3 class="h5 mt-3">Опытные врачи</h3>
+            <p class="mb-0 text-muted">Специалисты с профильным образованием и регулярным повышением квалификации.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="feature-icon">💙</div>
+            <h3 class="h5 mt-3">Без боли и стресса</h3>
+            <p class="mb-0 text-muted">Современная анестезия и бережное отношение к пациентам любого возраста.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОПУЛЯРНЫЕ УСЛУГИ -->
+    <section class="container my-5" id="services">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+        <div>
+          <h2 class="mb-1">Популярные услуги</h2>
+          <p class="text-muted mb-0">Лечение и профилактика для всей семьи</p>
+        </div>
+        <a class="btn btn-outline-clinic" href="catalog.html">Все услуги</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card service-card h-100 shadow-sm">
+            <img src="images/service-hygiene.jpg" class="card-img-top" alt="Профессиональная гигиена"
+                 onerror="this.style.display='none'">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="card-title h5 mb-0">Профессиональная гигиена</h3>
+                <span class="badge bg-success">Новинка</span>
+              </div>
+              <p class="card-text text-muted">Комплексная чистка, снятие налёта и профилактика заболеваний полости рта.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">от 3 500 ₽</p>
+              <div class="d-flex gap-2">
+                <a href="product.html" class="btn btn-clinic btn-sm">Подробнее</a>
+                <a href="order.html" class="btn btn-outline-clinic btn-sm">Записаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card service-card h-100 shadow-sm">
+            <img src="images/service-caries.jpg" class="card-img-top" alt="Лечение кариеса"
+                 onerror="this.style.display='none'">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="card-title h5 mb-0">Лечение кариеса</h3>
+                <span class="badge bg-warning text-dark">Хит</span>
+              </div>
+              <p class="card-text text-muted">Безболезненное лечение с современными пломбировочными материалами.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">от 4 000 ₽</p>
+              <div class="d-flex gap-2">
+                <a href="product.html" class="btn btn-clinic btn-sm">Подробнее</a>
+                <a href="order.html" class="btn btn-outline-clinic btn-sm">Записаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card service-card h-100 shadow-sm">
+            <img src="images/service-implant.jpg" class="card-img-top" alt="Имплантация"
+                 onerror="this.style.display='none'">
+            <div class="card-body d-flex flex-column">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h3 class="card-title h5 mb-0">Имплантация</h3>
+                <span class="badge bg-danger">Скидка</span>
+              </div>
+              <p class="card-text text-muted">Восстановление зубов с использованием надёжных имплантов.</p>
+              <p class="fw-bold fs-5 mt-auto mb-3">от 25 000 ₽</p>
+              <div class="d-flex gap-2">
+                <a href="product.html" class="btn btn-clinic btn-sm">Подробнее</a>
+                <a href="order.html" class="btn btn-outline-clinic btn-sm">Записаться</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВРАЧИ: 8 карточек -->
+    <section class="bg-light py-5" id="doctors">
+      <div class="container">
+        <h2 class="text-center mb-2">Наши врачи</h2>
+        <p class="text-center text-muted mb-5">8 специалистов, которым доверяют пациенты</p>
+
+        <div class="row g-4">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-1.jpg" alt="Анна Иванова – стоматолог-терапевт"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Анна Иванова</h3>
+                <p class="text-clinic small mb-2">Стоматолог-терапевт</p>
+                <p class="text-muted small mb-0">Стаж 12 лет. Лечение кариеса, эндодонтия.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-2.jpg" alt="Сергей Петров – хирург-имплантолог"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Сергей Петров</h3>
+                <p class="text-clinic small mb-2">Хирург-имплантолог</p>
+                <p class="text-muted small mb-0">Стаж 15 лет. Имплантация, костная пластика.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-3.jpg" alt="Елена Смирнова – детский стоматолог"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Елена Смирнова</h3>
+                <p class="text-clinic small mb-2">Детский стоматолог</p>
+                <p class="text-muted small mb-0">Стаж 10 лет. Лечение и адаптация детей.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-4.jpg" alt="Дмитрий Козлов – ортопед"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Дмитрий Козлов</h3>
+                <p class="text-clinic small mb-2">Стоматолог-ортопед</p>
+                <p class="text-muted small mb-0">Стаж 14 лет. Коронки, мосты, протезирование.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-5.webp" alt="Ольга Новикова – ортодонт"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Ольга Новикова</h3>
+                <p class="text-clinic small mb-2">Стоматолог-ортодонт</p>
+                <p class="text-muted small mb-0">Стаж 9 лет. Брекеты, элайнеры, прикус.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-6.jpg" alt="Игорь Морозов – пародонтолог"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Игорь Морозов</h3>
+                <p class="text-clinic small mb-2">Пародонтолог</p>
+                <p class="text-muted small mb-0">Стаж 11 лет. Лечение дёсен, профилактика.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-7.jpg" alt="Наталья Волкова – гигиенист"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Наталья Волкова</h3>
+                <p class="text-clinic small mb-2">Гигиенист</p>
+                <p class="text-muted small mb-0">Стаж 7 лет. Профгигиена, отбеливание.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+              <img src="images/doctor-8.jpg" alt="Павел Соколов – эндодонтист"
+                   class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+              <div class="card-body">
+                <h3 class="h6 mb-1">Павел Соколов</h3>
+                <p class="text-clinic small mb-2">Эндодонтист</p>
+                <p class="text-muted small mb-0">Стаж 13 лет. Лечение каналов под микроскопом.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ: карусель -->
+    <section class="container my-5">
+      <h2 class="text-center mb-2">Отзывы пациентов</h2>
+      <p class="text-center text-muted mb-5">Что говорят о нас</p>
+
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-12 col-md-4">
+                <div class="review-card p-4 h-100">
+                  <p class="mb-3">«Лечила кариес у Анны Ивановой – всё прошло спокойно и без боли. Очень внимательный врач».</p>
+                  <div class="fw-semibold">Мария К.</div>
+                  <small class="text-muted">Пациент</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="review-card p-4 h-100">
+                  <p class="mb-3">«Поставил имплант у Сергея Петрова. Всё объяснили, показали на снимках, результатом доволен».</p>
+                  <div class="fw-semibold">Алексей В.</div>
+                  <small class="text-muted">Пациент</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="review-card p-4 h-100">
+                  <p class="mb-3">«Водим ребёнка к Елене Смирновой. Дочь больше не боится стоматологов – для нас это главное».</p>
+                  <div class="fw-semibold">Ольга Д.</div>
+                  <small class="text-muted">Пациент</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-12 col-md-4">
+                <div class="review-card p-4 h-100">
+                  <p class="mb-3">«Профгигиена у Натальи Волковой – быстро, аккуратно и с рекомендациями по уходу».</p>
+                  <div class="fw-semibold">Ирина П.</div>
+                  <small class="text-muted">Пациент</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="review-card p-4 h-100">
+                  <p class="mb-3">«Ставили коронку у Дмитрия Козлова. Аккуратно, без спешки, всё по срокам».</p>
+                  <div class="fw-semibold">Виктор Н.</div>
+                  <small class="text-muted">Пациент</small>
+                </div>
+              </div>
+              <div class="col-12 col-md-4">
+                <div class="review-card p-4 h-100">
+                  <p class="mb-3">«Брекеты у Ольги Новиковой – всё понятно объяснили, результат уже виден».</p>
+                  <div class="fw-semibold">Анна С.</div>
+                  <small class="text-muted">Пациент</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="review-btn review-btn-side review-btn-prev" type="button"
+                data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Предыдущий отзыв">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
+
+        <button class="review-btn review-btn-side review-btn-next" type="button"
+                data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Следующий отзыв">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="container my-5">
+    <h2 class="text-center mb-2">Наша клиника</h2>
+    <p class="text-center text-muted mb-5">Светлые кабинеты и современное оборудование</p>
+    <div class="row g-3">
+
+        <div class="col-6 col-lg-3">
+        <div class="gallery-item">
+            <img src="images/gallery-reception.jpg" alt="Ресепшн клиники «Белый ключ»"
+                class="gallery-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('gallery-empty');">
+            <span class="gallery-label">Ресепшн</span>
+        </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+        <div class="gallery-item">
+            <img src="images/gallery-therapy.jpg" alt="Кабинет терапии"
+                class="gallery-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('gallery-empty');">
+            <span class="gallery-label">Кабинет терапии</span>
+        </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+        <div class="gallery-item">
+            <img src="images/gallery-surgery.jpg" alt="Хирургический кабинет"
+                class="gallery-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('gallery-empty');">
+            <span class="gallery-label">Хирургический кабинет</span>
+        </div>
+        </div>
+
+        <div class="col-6 col-lg-3">
+        <div class="gallery-item">
+            <img src="images/gallery-kids.jpg" alt="Детская зона"
+                class="gallery-img"
+                onerror="this.style.display='none'; this.parentElement.classList.add('gallery-empty');">
+            <span class="gallery-label">Детская зона</span>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section py-5">
+      <div class="container text-center">
+        <h2 class="text-white mb-3">Запишитесь на приём сегодня</h2>
+        <p class="text-white-50 mb-4">Подберём удобное время и ответим на все вопросы</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="order.html" class="btn btn-light btn-lg">Записаться онлайн</a>
+          <a href="tel:+74951234567" class="btn btn-outline-light btn-lg">+7 (495) 123-45-67</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="bg-dark text-white-50 py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center mb-3">
+            <span class="brand-mark brand-mark-dark me-2">БК</span>
+            <span class="fw-bold text-white">Белый ключ</span>
+          </div>
+          <p class="small mb-0">Стоматология для всей семьи. Лечение, имплантация и профилактика в Москве.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="h6 text-white mb-3">Клиника</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html" class="text-white-50 text-decoration-none">Услуги</a></li>
+            <li class="mb-2"><a href="#doctors" class="text-white-50 text-decoration-none">Врачи</a></li>
+            <li class="mb-2"><a href="order.html" class="text-white-50 text-decoration-none">Запись</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="h6 text-white mb-3">Контакты</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2">Москва, ул. Примерная, 12</li>
+            <li class="mb-2">Ежедневно 9:00–21:00</li>
+            <li class="mb-2"><a href="tel:+74951234567" class="text-white-50 text-decoration-none">+7 (495) 123-45-67</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="h6 text-white mb-3">Запись</h4>
+          <p class="small">Оставьте заявку – перезвоним в течение 15 минут.</p>
+          <a href="order.html" class="btn btn-clinic btn-sm">Записаться</a>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between small">
+        <span>© 2026 Стоматология «Белый ключ». Учебный проект.</span>
+        <span>ИНН 0000000000 · Лицензия ЛО-00-00-000000</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

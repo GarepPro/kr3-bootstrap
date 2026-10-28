@@ -1,0 +1,309 @@
+/* =========================================================
+   Белый ключ — custom.css
+   Палитра, компоненты, карточки, врачи, карусель, галерея
+   ========================================================= */
+
+:root {
+  --clinic: #0ea5b7;
+  --clinic-dark: #0f766e;
+  --clinic-light: #f0fdfa;
+  --ink: #0f172a;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ink);
+}
+
+/* ---------- Палитра клиники ---------- */
+.bg-clinic { background-color: var(--clinic) !important; }
+.text-clinic { color: var(--clinic-dark) !important; }
+
+.btn-clinic {
+  background-color: var(--clinic);
+  border-color: var(--clinic);
+  color: #fff;
+}
+.btn-clinic:hover,
+.btn-clinic:focus {
+  background-color: var(--clinic-dark);
+  border-color: var(--clinic-dark);
+  color: #fff;
+}
+
+.btn-outline-clinic {
+  color: var(--clinic-dark);
+  border-color: var(--clinic);
+}
+.btn-outline-clinic:hover {
+  background-color: var(--clinic);
+  border-color: var(--clinic);
+  color: #fff;
+}
+
+/* ---------- Логотип-марка ---------- */
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--clinic);
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
+.brand-mark-dark { background: var(--clinic-dark); }
+
+/* ---------- Hero ---------- */
+.hero-section {
+  background: linear-gradient(180deg, var(--clinic-light) 0%, #ffffff 100%);
+}
+
+.hero-img {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.placeholder-box {
+  min-height: 320px;
+  background: #e9f7f9;
+  border: 1px dashed #b6e3e9 !important;
+}
+
+/* ---------- Срочная помощь ---------- */
+.urgent-bar {
+  background: #fff7e6;
+  border: 1px solid #ffe0a3;
+}
+
+/* ---------- Карточки преимуществ ---------- */
+.feature-card {
+  background: #fff;
+  border: 1px solid #e5eef0;
+  border-radius: 14px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 .5rem 1.5rem rgba(15, 118, 110, .12);
+}
+.feature-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+/* ---------- Карточки услуг ---------- */
+.service-card {
+  border: 1px solid #e5eef0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-img-placeholder {
+  height: 180px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: #e9f7f9;
+  color: #6c8a8f;
+  font-size: .9rem;
+}
+
+/* ---------- Врачи: фото строго 110×110 ---------- */
+.doctor-card {
+  overflow: hidden;
+}
+
+.doctor-photo {
+  width: 110px !important;
+  height: 110px !important;
+  max-width: 110px !important;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: var(--clinic-light);
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, .12);
+}
+
+/* Вариант с обёрткой (если используется) */
+.doctor-photo-wrap {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, .12);
+  background: var(--clinic-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.doctor-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
+}
+.doctor-initials {
+  display: none;
+  font-weight: 700;
+  color: var(--clinic-dark);
+  font-size: 1.25rem;
+}
+.doctor-photo-wrap.is-empty .doctor-initials {
+  display: block;
+}
+
+/* ---------- Отзывы + карусель ---------- */
+.review-card {
+  background: #fff;
+  border: 1px solid #e5eef0;
+  border-radius: 14px;
+  border-left: 4px solid var(--clinic);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Фиксируем высоту слайдов, чтобы страница не прыгала */
+#reviewsCarousel .carousel-item {
+  min-height: 260px;
+}
+
+@media (max-width: 767.98px) {
+  #reviewsCarousel .carousel-item {
+    min-height: 620px;
+  }
+}
+
+/* Стрелки карусели отзывов */
+.review-control {
+  width: 40px;
+  opacity: 1;
+}
+.review-control .carousel-control-prev-icon,
+.review-control .carousel-control-next-icon {
+  filter: invert(1) grayscale(1);
+  background-color: var(--clinic);
+  border-radius: 50%;
+  padding: 18px;
+}
+
+/* ---------- Галерея клиники ---------- */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #e9f7f9;
+  min-height: 200px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: .5rem .75rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, .6));
+  color: #fff;
+  font-size: .9rem;
+}
+
+.gallery-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #b6e3e9;
+}
+.gallery-empty .gallery-label {
+  position: static;
+  background: none;
+  color: #6c8a8f;
+}
+
+/* ---------- CTA ---------- */
+.cta-section {
+  background: linear-gradient(135deg, var(--clinic-dark) 0%, var(--clinic) 100%);
+}
+
+/* ---------- Страница услуги ---------- */
+.placeholder-image {
+  min-height: 320px;
+}
+
+.product-img {
+  max-height: 420px;
+  object-fit: cover;
+}
+
+/* Аккуратные таблицы */
+.table th {
+  width: 30%;
+  font-weight: 600;
+}
+
+/* ---------- Мобильные мелочи ---------- */
+@media (max-width: 575.98px) {
+  .display-5 { font-size: 2rem; }
+  .placeholder-box { min-height: 220px; }
+}
+
+.review-btn-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, .15);
+}
+.review-btn-prev { left: -16px; }
+.review-btn-next { right: -16px; }
+
+@media (max-width: 767.98px) {
+  .review-btn-side { display: none; } /* на мобильном прячем, листание свайпом/точками */
+}
+
+.review-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: var(--clinic-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 6px 18px rgba(15, 118, 110, .15);
+  transition: background .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease;
+}
+
+.review-btn:hover,
+.review-btn:focus-visible {
+  background: var(--clinic);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(15, 118, 110, .28);
+  outline: none;
+}
+
+.review-btn:active {
+  transform: scale(.94);
+}

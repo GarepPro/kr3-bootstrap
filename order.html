@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись на приём – Стоматология «Белый ключ»</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-light">
+
+  <!-- Верхняя панель -->
+  <div class="topbar bg-dark text-white py-2 d-none d-md-block">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6"><small>Москва, ул. Примерная, 12 · Ежедневно 9:00–21:00</small></div>
+        <div class="col-md-6 text-md-end">
+          <a href="tel:+74951234567" class="text-white text-decoration-none fw-semibold">+7 (495) 123-45-67</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Шапка -->
+  <header class="bg-white border-bottom py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-8 col-md-6">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <span class="brand-mark me-2">БК</span>
+            <span>
+              <span class="d-block fw-bold text-dark">Белый ключ</span>
+              <small class="text-muted d-none d-sm-block">Стоматология для всей семьи</small>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="order.html">Запись</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#doctors">Врачи</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+
+        <nav aria-label="breadcrumb" class="mb-3">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Главная</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Запись на приём</li>
+          </ol>
+        </nav>
+
+        <div class="card shadow-sm">
+          <div class="card-header bg-clinic text-white">
+            <h1 class="h4 mb-0">Запись на приём</h1>
+          </div>
+          <div class="card-body">
+
+            <div class="alert alert-info" role="alert">
+              Заполните форму. Поля со звёздочкой обязательны. Мы перезвоним в течение 15 минут.
+            </div>
+
+            <form>
+              <div class="row g-3">
+
+                <div class="col-12 col-md-6">
+                  <label for="order-name" class="form-label">Имя *</label>
+                  <input id="order-name" name="name" type="text" class="form-control" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="order-email" class="form-label">E-mail *</label>
+                  <input id="order-email" name="email" type="email" class="form-control" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="order-phone" class="form-label">Телефон *</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+7</span>
+                    <input id="order-phone" name="phone" type="tel" class="form-control"
+                           placeholder="900 000-00-00" required>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="order-product" class="form-label">Услуга</label>
+                  <select id="order-product" name="service" class="form-select">
+                    <option selected>Выберите услугу</option>
+                    <option>Профессиональная гигиена</option>
+                    <option>Лечение кариеса</option>
+                    <option>Имплантация</option>
+                    <option>Отбеливание зубов</option>
+                    <option>Брекет-системы</option>
+                    <option>Детская стоматология</option>
+                    <option>Протезирование</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="order-date" class="form-label">Желаемая дата</label>
+                  <input id="order-date" name="date" type="date" class="form-control">
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label for="order-time" class="form-label">Удобное время</label>
+                  <select id="order-time" name="time" class="form-select">
+                    <option selected>Любое</option>
+                    <option>9:00–12:00</option>
+                    <option>12:00–15:00</option>
+                    <option>15:00–18:00</option>
+                    <option>18:00–21:00</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="order-comment" class="form-label">Комментарий</label>
+                  <textarea id="order-comment" name="comment" class="form-control" rows="4"
+                            placeholder="Кратко опишите проблему или пожелания"></textarea>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input id="order-agree" class="form-check-input" type="checkbox" required>
+                    <label class="form-check-label" for="order-agree">
+                      Я согласен на обработку персональных данных *
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-12 d-flex gap-2 flex-wrap">
+                  <button class="btn btn-clinic" type="submit">Отправить заявку</button>
+                  <button class="btn btn-outline-secondary" type="reset">Очистить</button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+        <!-- Дополнительный alert -->
+        <div class="alert alert-secondary mt-4" role="alert">
+          Если вам нужна срочная помощь – позвоните по телефону
+          <a href="tel:+74951234567" class="alert-link">+7 (495) 123-45-67</a>.
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Подвал -->
+  <footer class="bg-dark text-white-50 py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center mb-3">
+            <span class="brand-mark brand-mark-dark me-2">БК</span>
+            <span class="fw-bold text-white">Белый ключ</span>
+          </div>
+          <p class="small mb-0">Стоматология для всей семьи. Лечение, имплантация и профилактика в Москве.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="h6 text-white mb-3">Клиника</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html" class="text-white-50 text-decoration-none">Услуги</a></li>
+            <li class="mb-2"><a href="index.html#doctors" class="text-white-50 text-decoration-none">Врачи</a></li>
+            <li class="mb-2"><a href="order.html" class="text-white-50 text-decoration-none">Запись</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="h6 text-white mb-3">Контакты</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2">Москва, ул. Примерная, 12</li>
+            <li class="mb-2">Ежедневно 9:00–21:00</li>
+            <li class="mb-2"><a href="tel:+74951234567" class="text-white-50 text-decoration-none">+7 (495) 123-45-67</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="h6 text-white mb-3">Запись</h4>
+          <p class="small">Оставьте заявку – перезвоним в течение 15 минут.</p>
+          <a href="order.html" class="btn btn-clinic btn-sm">Записаться</a>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between small">
+        <span>© 2026 Стоматология «Белый ключ».</span>
+        <span>ИНН 0000000000 · Лицензия ЛО-00-00-000000</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
