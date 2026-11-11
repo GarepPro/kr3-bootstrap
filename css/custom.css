@@ -307,3 +307,390 @@ body {
 .review-btn:active {
   transform: scale(.94);
 }
+
+/* === Тёмная тема: принудительные исправления === */
+[data-bs-theme="dark"] header,
+[data-bs-theme="dark"] nav.navbar {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .doctor-card,
+[data-bs-theme="dark"] .feature-card,
+[data-bs-theme="dark"] .review-card,
+[data-bs-theme="dark"] .service-card {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .bg-white {
+  background-color: var(--bs-body-bg) !important;
+}
+
+[data-bs-theme="dark"] .text-dark,
+[data-bs-theme="dark"] .text-black {
+  color: var(--bs-body-color) !important;
+}
+
+/* Hero и любые блоки с картинкой здания */
+[data-bs-theme="dark"] .hero-section {
+  background: linear-gradient(180deg, #16282b 0%, var(--bs-body-bg) 100%) !important;
+}
+
+[data-bs-theme="dark"] .hero-img {
+  filter: brightness(.85);
+}
+
+[data-bs-theme="dark"] .placeholder-box,
+[data-bs-theme="dark"] .placeholder-image,
+[data-bs-theme="dark"] .gallery-item,
+[data-bs-theme="dark"] .card-img-placeholder {
+  background-color: var(--bs-secondary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .text-dark,
+[data-bs-theme="dark"] .text-black,
+[data-bs-theme="dark"] .text-black-50 {
+  color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6,
+[data-bs-theme="dark"] p,
+[data-bs-theme="dark"] li,
+[data-bs-theme="dark"] span,
+[data-bs-theme="dark"] small,
+[data-bs-theme="dark"] a:not(.btn) {
+  color: var(--bs-body-color);
+}
+
+/* === Тёмная тема: финальная страховка === */
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .bg-body-tertiary {
+  background-color: var(--bs-body-bg) !important;
+}
+
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .doctor-card,
+[data-bs-theme="dark"] .feature-card,
+[data-bs-theme="dark"] .review-card,
+[data-bs-theme="dark"] .service-card,
+[data-bs-theme="dark"] .modal-content,
+[data-bs-theme="dark"] .offcanvas {
+  background-color: var(--bs-body-bg) !important;
+  color: var(--bs-body-color) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .text-dark,
+[data-bs-theme="dark"] .text-black,
+[data-bs-theme="dark"] .text-muted {
+  color: var(--bs-secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .hero-section {
+  background: linear-gradient(180deg, #16282b 0%, var(--bs-body-bg) 100%) !important;
+}
+
+[data-bs-theme="dark"] .placeholder-box,
+[data-bs-theme="dark"] .placeholder-image,
+[data-bs-theme="dark"] .gallery-item,
+[data-bs-theme="dark"] .card-img-placeholder {
+  background-color: var(--bs-secondary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .urgent-bar {
+  background-color: #2a2318 !important;
+  border-color: #4a3f2a !important;
+  color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] .urgent-bar .text-muted {
+  color: var(--bs-secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .urgent-bar .btn-warning {
+  color: #1a1a1a;
+}
+
+[data-bs-theme="dark"] .feature-card,
+[data-bs-theme="dark"] .review-card,
+[data-bs-theme="dark"] .service-card {
+  border: 1px solid var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .doctor-card {
+  background-color: var(--bs-body-bg) !important;
+  border: 1px solid #2c3034 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35) !important;
+}
+
+.doctors-controls .carousel-indicators {
+  position: static;
+  margin: 0;
+  display: flex;
+  gap: .4rem;
+}
+
+.doctors-controls .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c9dfe3;
+  border: 0;
+  opacity: 1;
+  transition: background .15s ease, transform .15s ease;
+}
+
+.doctors-controls .carousel-indicators .active {
+  background-color: var(--clinic);
+  transform: scale(1.2);
+}
+
+[data-bs-theme="dark"] .doctors-controls .carousel-indicators [data-bs-target] {
+  background-color: #3a4247;
+}
+
+[data-bs-theme="dark"] .doctors-controls .carousel-indicators .active {
+  background-color: var(--clinic);
+}
+
+[data-bs-theme="dark"] .review-btn {
+  background-color: var(--bs-secondary-bg) !important;
+  color: var(--bs-body-color) !important;
+  border: 1px solid var(--bs-border-color) !important;
+  box-shadow: none !important;
+}
+
+[data-bs-theme="dark"] .review-btn:hover,
+[data-bs-theme="dark"] .review-btn:focus-visible {
+  background-color: var(--clinic) !important;
+  color: #fff !important;
+}
+
+[data-bs-theme="dark"] .ratio iframe,
+[data-bs-theme="dark"] iframe[src*="yandex"] {
+  filter: brightness(.92) contrast(1.03);
+}
+
+/* ===== Виджет чата ===== */
+.chat-toggle {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 0;
+}
+
+.chat-panel {
+  width: 380px !important;
+}
+
+@media (max-width: 575.98px) {
+  .chat-panel { width: 100% !important; }
+  .chat-toggle { width: 54px; height: 54px; margin: 1rem !important; }
+}
+
+.chat-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--clinic);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.chat-messages {
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+}
+
+.chat-msg {
+  display: flex;
+}
+
+.chat-msg-user {
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: .55rem .8rem;
+  border-radius: 14px;
+  font-size: .92rem;
+  line-height: 1.4;
+}
+
+.chat-msg-bot .chat-bubble {
+  background: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+  border-top-left-radius: 4px;
+}
+
+.chat-msg-user .chat-bubble {
+  background: var(--clinic);
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+
+/* Тёмная тема */
+[data-bs-theme="dark"] .chat-msg-bot .chat-bubble {
+  background: #2c3034;
+}
+
+.feature-step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--clinic-light);
+  color: var(--clinic-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+[data-bs-theme="dark"] .feature-step {
+  background: #2c3034;
+  color: var(--clinic);
+}
+
+.feature-step {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--clinic-light);
+  color: var(--clinic-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .9rem;
+}
+
+[data-bs-theme="dark"] .feature-step {
+  background: #2c3034;
+  color: var(--clinic);
+}
+
+.review-stars {
+  color: #f5b301;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+[data-bs-theme="dark"] .review-stars {
+  color: #ffc93c;
+}
+
+/* ===== Виджет чата ===== */
+.chat-toggle {
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 0;
+}
+
+.chat-panel { width: 380px !important; }
+
+@media (max-width: 575.98px) {
+  .chat-panel { width: 100% !important; }
+  .chat-toggle { width: 54px; height: 54px; margin: 1rem !important; }
+}
+
+.chat-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--clinic);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.chat-messages {
+  overflow-y: auto;
+  max-height: calc(100vh - 180px);
+}
+
+.chat-msg { display: flex; }
+.chat-msg-user { justify-content: flex-end; }
+
+.chat-bubble {
+  max-width: 80%;
+  padding: .55rem .8rem;
+  border-radius: 14px;
+  font-size: .92rem;
+  line-height: 1.4;
+}
+
+.chat-msg-bot .chat-bubble {
+  background: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+  border-top-left-radius: 4px;
+}
+
+.chat-msg-user .chat-bubble {
+  background: var(--clinic);
+  color: #fff;
+  border-top-right-radius: 4px;
+}
+
+[data-bs-theme="dark"] .chat-msg-bot .chat-bubble {
+  background: #2c3034;
+}
+
+/* ===== Анимация появления (about.html) ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Задержки для каскада */
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+
+/* Уважаем настройку «уменьшить движение» */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Числа-счётчики */
+.count {
+  font-variant-numeric: tabular-nums; /* чтобы ширина не «прыгала» */
+  min-height: 1em;
+}

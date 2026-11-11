@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>О клинике – Стоматология «Белый ключ»</title>
+  <meta name="description" content="О стоматологии «Белый ключ»: история, принципы, команда, оборудование и подход к лечению.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-body">
+
+  <!-- ВЕРХНЯЯ ПАНЕЛЬ -->
+  <div class="topbar bg-dark text-white py-2 d-none d-md-block">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6"><small>Москва, ул. Примерная, 12 · Ежедневно 9:00–21:00</small></div>
+        <div class="col-md-6 text-md-end">
+          <a href="tel:+74951234567" class="text-white text-decoration-none fw-semibold">+7 (495) 123-45-67</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ШАПКА -->
+  <header class="bg-body border-bottom py-3">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-8 col-md-6">
+          <a href="index.html" class="d-flex align-items-center text-decoration-none">
+            <span class="brand-mark me-2">БК</span>
+            <span>
+              <span class="d-block fw-bold text-body">Белый ключ</span>
+              <small class="text-muted d-none d-sm-block">Стоматология для всей семьи</small>
+            </span>
+          </a>
+        </div>
+        <div class="col-4 col-md-6 text-end">
+          <button type="button" class="btn btn-clinic d-none d-md-inline-block"
+                  data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Записаться на приём
+          </button>
+          <button type="button" class="btn btn-clinic btn-sm d-md-none"
+                  data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Запись
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- НАВИГАЦИЯ -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+              aria-controls="mainNavbar" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="doctors.html">Врачи</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">О нас</a></li>
+        </ul>
+        <a href="tel:+74951234567" class="btn btn-outline-clinic btn-sm d-lg-none mt-2">Позвонить: +7 (495) 123-45-67</a>
+      </div>
+      <!-- Переключатель темы -->
+        <div class="dropdown">
+        <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button"
+                id="themeDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            🌓 Тема
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+            <li><button class="dropdown-item" type="button" data-set-theme="light">☀️ Светлая</button></li>
+            <li><button class="dropdown-item" type="button" data-set-theme="dark">🌙 Тёмная</button></li>
+            <li><button class="dropdown-item" type="button" data-set-theme="auto">💻 Как в системе</button></li>
+        </ul>
+        </div>
+    </div>
+  </nav>
+
+  <main class="container my-5">
+
+    <!-- Хлебные крошки -->
+    <nav aria-label="breadcrumb" class="mb-3">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">О нас</li>
+      </ol>
+    </nav>
+
+    <!-- Hero -->
+    <div class="row align-items-center g-4 mb-5">
+      <div class="col-12 col-lg-7">
+        <h1 class="h2 mb-3">О клинике «Белый ключ»</h1>
+        <p class="lead text-muted mb-3">
+          Мы лечим зубы взрослым и детям с 2014 года. Современное оборудование,
+          опытные врачи и внимательный подход к каждому пациенту.
+        </p>
+        <p class="text-muted mb-4">
+          «Белый ключ» – это семейная стоматология в Москве, где лечение начинается
+          с разговора, а не с прейскуранта. Мы объясняем каждый этап, показываем
+          снимки и предлагаем варианты – решение всегда за пациентом.
+        </p>
+        <div class="d-flex gap-3 flex-wrap">
+          <button type="button" class="btn btn-clinic"
+                  data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Записаться на приём
+          </button>
+          <a href="doctors.html" class="btn btn-outline-clinic">Наши врачи</a>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5">
+        <img src="images/hero-clinic.jpg" alt="Клиника «Белый ключ»"
+             class="img-fluid rounded shadow-sm w-100 hero-img"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="placeholder-box rounded shadow-sm align-items-center justify-content-center" style="display:none;">
+          <span class="text-muted">Фото клиники</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Цифры -->
+    <div class="row g-4 mb-5">
+    <div class="col-6 col-md-3 reveal">
+        <div class="feature-card p-4 h-100 text-center">
+        <div class="fw-bold fs-3 count" data-count="12" data-suffix="+">0</div>
+        <p class="text-muted small mb-0">лет работаем в Москве</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 reveal reveal-delay-1">
+        <div class="feature-card p-4 h-100 text-center">
+        <div class="fw-bold fs-3 count" data-count="8">0</div>
+        <p class="text-muted small mb-0">врачей разных специализаций</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 reveal reveal-delay-2">
+        <div class="feature-card p-4 h-100 text-center">
+        <div class="fw-bold fs-3 count" data-count="15000" data-suffix="+">0</div>
+        <p class="text-muted small mb-0">пациентов доверили нам улыбку</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-3 reveal reveal-delay-3">
+        <div class="feature-card p-4 h-100 text-center">
+        <div class="fw-bold fs-3 count" data-count="4.9" data-decimals="1">0,0</div>
+        <p class="text-muted small mb-0">средняя оценка по отзывам</p>
+        </div>
+    </div>
+    </div>
+
+    <!-- История -->
+    <section class="mb-5">
+    <div class="text-center mb-4 reveal">
+        <h2 class="h4 mb-2">Наша история</h2>
+        <p class="text-muted mb-0 mx-auto" style="max-width: 560px;">
+        От небольшого кабинета до семейной клиники с полным спектром услуг
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-4 reveal">
+        <div class="feature-card p-4 h-100">
+            <div class="feature-step mb-3">2014</div>
+            <h3 class="h6">Открытие</h3>
+            <p class="text-muted small mb-0">
+            Небольшой кабинет на два кресла, один терапевт и принцип –
+            лечить так, как лечили бы своих близких.
+            </p>
+        </div>
+        </div>
+        <div class="col-12 col-md-4 reveal reveal-delay-1">
+        <div class="feature-card p-4 h-100">
+            <div class="feature-step mb-3">2019</div>
+            <h3 class="h6">Расширение</h3>
+            <p class="text-muted small mb-0">
+            Появились хирургия, ортодонтия и детский приём. Купили микроскоп
+            и цифровую диагностику.
+            </p>
+        </div>
+        </div>
+        <div class="col-12 col-md-4 reveal reveal-delay-2">
+        <div class="feature-card p-4 h-100">
+            <div class="feature-step mb-3">2024</div>
+            <h3 class="h6">Сегодня</h3>
+            <p class="text-muted small mb-0">
+            8 врачей, полный спектр услуг и более 15 000 пациентов.
+            Продолжаем учиться и обновлять оборудование.
+            </p>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Принципы -->
+    <section class="mb-5">
+    <div class="text-center mb-4 reveal">
+        <h2 class="h4 mb-2">Наши принципы</h2>
+        <p class="text-muted mb-0 mx-auto" style="max-width: 560px;">
+        То, на чём держится клиника
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-12 col-md-6 reveal">
+        <div class="feature-card p-4 h-100 d-flex gap-3">
+            <div class="feature-icon">🩺</div>
+            <div>
+            <h3 class="h6 mb-1">Объясняем каждый этап</h3>
+            <p class="text-muted small mb-0">
+                Пациент должен понимать, что и зачем делается. Показываем снимки,
+                рассказываем о вариантах и последствиях.
+            </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 reveal reveal-delay-1">
+        <div class="feature-card p-4 h-100 d-flex gap-3">
+            <div class="feature-icon">🚫</div>
+            <div>
+            <h3 class="h6 mb-1">Не назначаем лишнего</h3>
+            <p class="text-muted small mb-0">
+                Предлагаем только те процедуры, которые действительно нужны.
+                Если можно сохранить зуб – сохраняем.
+            </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 reveal">
+        <div class="feature-card p-4 h-100 d-flex gap-3">
+            <div class="feature-icon">🔬</div>
+            <div>
+            <h3 class="h6 mb-1">Работаем с современным оборудованием</h3>
+            <p class="text-muted small mb-0">
+                Микроскоп, КТ, цифровое моделирование и безопасные материалы –
+                всё, чтобы лечение было точным.
+            </p>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-md-6 reveal reveal-delay-1">
+        <div class="feature-card p-4 h-100 d-flex gap-3">
+            <div class="feature-icon">💙</div>
+            <div>
+            <h3 class="h6 mb-1">Бережём доверие</h3>
+            <p class="text-muted small mb-0">
+                Работаем с тревожными пациентами и детьми, не торопим
+                и не давим. Комфорт важнее скорости.
+            </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- Команда -->
+    <section class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="h4 mb-2">Наша команда</h2>
+        <p class="text-muted mb-0 mx-auto" style="max-width: 560px;">
+          Восемь специалистов – от терапевта до детского стоматолога
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+            <img src="images/doctor-1.jpg" alt="Анна Иванова – стоматолог-терапевт"
+                 class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Анна Иванова</h3>
+              <p class="text-clinic small mb-2">Стоматолог-терапевт</p>
+              <p class="text-muted small mb-0">Лечение кариеса и каналов, микроскоп, эстетическая реставрация.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+            <img src="images/doctor-2.jpg" alt="Сергей Петров – хирург-имплантолог"
+                 class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Сергей Петров</h3>
+              <p class="text-clinic small mb-2">Хирург-имплантолог</p>
+              <p class="text-muted small mb-0">Имплантация, костная пластика, сложные удаления.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card doctor-card h-100 border-0 shadow-sm text-center">
+            <img src="images/doctor-3.jpg" alt="Елена Смирнова – детский стоматолог"
+                 class="doctor-photo mt-4 mx-auto" onerror="this.style.display='none'">
+            <div class="card-body">
+              <h3 class="h6 mb-1">Елена Смирнова</h3>
+              <p class="text-clinic small mb-2">Детский стоматолог</p>
+              <p class="text-muted small mb-0">Лечение и адаптация детей, первый визит без лечения.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="doctors.html" class="btn btn-outline-clinic">Все врачи</a>
+      </div>
+    </section>
+
+    <!-- Оборудование -->
+    <section class="bg-body-tertiary py-5 my-5 rounded-4">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2 class="h4 mb-2">Оборудование и технологии</h2>
+          <p class="text-muted mb-0 mx-auto" style="max-width: 560px;">
+            Помогают лечить точно, быстро и без боли
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 text-center">
+              <div class="fs-2 mb-2">🔬</div>
+              <h3 class="h6">Дентальный микроскоп</h3>
+              <p class="text-muted small mb-0">Видим анатомию каналов и сохраняем сложные зубы.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 text-center">
+              <div class="fs-2 mb-2">🩻</div>
+              <h3 class="h6">3D-диагностика и КТ</h3>
+              <p class="text-muted small mb-0">Планируем имплантацию и сложное лечение по снимкам.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 text-center">
+              <div class="fs-2 mb-2">💻</div>
+              <h3 class="h6">Цифровое моделирование</h3>
+              <p class="text-muted small mb-0">Показываем будущий результат до начала лечения.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="p-3 text-center">
+              <div class="fs-2 mb-2">💉</div>
+              <h3 class="h6">Современная анестезия</h3>
+              <p class="text-muted small mb-0">Комфорт для взрослых и детей, включая тревожных.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="mb-5">
+      <div class="text-center mb-4">
+        <h2 class="h4 mb-2">Отзывы пациентов</h2>
+        <p class="text-muted mb-0 mx-auto" style="max-width: 560px;">
+          Что говорят о клинике
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="review-card p-4 h-100">
+            <div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="mb-3">«Пришла с острой болью – приняли в тот же день. Всё объяснили, полечили спокойно».</p>
+            <div class="fw-semibold">Мария К.</div>
+            <small class="text-muted">Пациент</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="review-card p-4 h-100">
+            <div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="mb-3">«Вожу ребёнка к Елене Смирновой. Дочь больше не боится стоматологов – для нас это главное».</p>
+            <div class="fw-semibold">Ольга Д.</div>
+            <small class="text-muted">Пациент</small>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="review-card p-4 h-100">
+            <div class="review-stars mb-2" aria-label="Оценка 5 из 5">★★★★★</div>
+            <p class="mb-3">«Поставил имплант у Сергея Петрова. Всё по плану, без сюрпризов по цене».</p>
+            <div class="fw-semibold">Алексей В.</div>
+            <small class="text-muted">Пациент</small>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Контакты -->
+    <section class="mb-5" id="contacts">
+    <div class="text-center mb-4">
+        <h2 class="h4 mb-2">Контакты</h2>
+        <p class="text-muted mb-0 mx-auto" style="max-width: 560px;">
+        Приходите в клинику или свяжитесь удобным способом
+        </p>
+    </div>
+
+    <div class="row g-4">
+        <!-- Левая колонка: детали -->
+        <div class="col-12 col-lg-5">
+        <div class="feature-card p-4 h-100">
+            <h3 class="h6 mb-3">Стоматология «Белый ключ»</h3>
+
+            <ul class="list-unstyled mb-4">
+            <li class="d-flex gap-3 mb-3">
+                <span class="fs-5">📍</span>
+                <div>
+                <div class="fw-semibold">Адрес</div>
+                <div class="text-muted small">Москва, ул. Примерная, 12<br>м. Примерная, 5 минут пешком</div>
+                </div>
+            </li>
+            <li class="d-flex gap-3 mb-3">
+                <span class="fs-5">📞</span>
+                <div>
+                <div class="fw-semibold">Телефон</div>
+                <a href="tel:+74951234567" class="text-decoration-none">+7 (495) 123-45-67</a>
+                <div class="text-muted small">Звонки принимаем ежедневно 9:00–21:00</div>
+                </div>
+            </li>
+            <li class="d-flex gap-3 mb-3">
+                <span class="fs-5">✉️</span>
+                <div>
+                <div class="fw-semibold">E-mail</div>
+                <a href="mailto:info@beliy-klyuch.ru" class="text-decoration-none">info@beliy-klyuch.ru</a>
+                </div>
+            </li>
+            <li class="d-flex gap-3 mb-3">
+                <span class="fs-5">🕒</span>
+                <div>
+                <div class="fw-semibold">Режим работы</div>
+                <div class="text-muted small">Пн–Вс: 9:00–21:00<br>Без выходных</div>
+                </div>
+            </li>
+            <li class="d-flex gap-3">
+                <span class="fs-5">🅿️</span>
+                <div>
+                <div class="fw-semibold">Парковка</div>
+                <div class="text-muted small">Бесплатная парковка для пациентов во дворе клиники</div>
+                </div>
+            </li>
+            </ul>
+
+            <div class="d-flex flex-wrap gap-2">
+            <a href="https://t.me/beliy_klyuch" class="btn btn-outline-clinic btn-sm" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://wa.me/74951234567" class="btn btn-outline-clinic btn-sm" target="_blank" rel="noopener">WhatsApp</a>
+            <button type="button" class="btn btn-clinic btn-sm"
+                    data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                Записаться
+            </button>
+            </div>
+        </div>
+        </div>
+
+        <!-- Правая колонка: карта -->
+        <div class="col-12 col-lg-7">
+        <div class="ratio ratio-4x3 rounded overflow-hidden shadow-sm">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A31bf236b1803d0ca9fa7ec6ab735c7579c7017f54c3128feb34c0199336434df&amp;source=constructor"
+                    title="Стоматология «Белый ключ» на карте"
+                    frameborder="0"
+                    allowfullscreen
+                    loading="lazy"></iframe>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section py-5 rounded-4">
+      <div class="container text-center">
+        <h2 class="text-white mb-2">Запишитесь на приём</h2>
+        <p class="text-white-50 mb-4">Подберём врача и удобное время – перезвоним в течение 15 минут</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <button type="button" class="btn btn-light btn-lg"
+                  data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Записаться онлайн
+          </button>
+          <a href="tel:+74951234567" class="btn btn-outline-light btn-lg">+7 (495) 123-45-67</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- МОДАЛКА ЗАПИСИ -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="feedbackModalLabel">Запись на приём</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+          <p class="text-muted small mb-3">Оставьте контакты – перезвоним в течение 15 минут и подтвердим время.</p>
+          <form id="orderForm">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="order-name" class="form-label">Имя *</label>
+                <input id="order-name" name="name" type="text" class="form-control" required>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-phone" class="form-label">Телефон *</label>
+                <div class="input-group">
+                  <span class="input-group-text">+7</span>
+                  <input id="order-phone" name="phone" type="tel" class="form-control" placeholder="900 000-00-00" required>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-email" class="form-label">E-mail</label>
+                <input id="order-email" name="email" type="email" class="form-control">
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-service" class="form-label">Услуга</label>
+                <select id="order-service" name="service" class="form-select">
+                  <option value="" selected>Не выбрана</option>
+                  <option value="hygiene">Профессиональная гигиена</option>
+                  <option value="caries">Лечение кариеса</option>
+                  <option value="implant">Имплантация</option>
+                  <option value="whitening">Отбеливание зубов</option>
+                  <option value="braces">Брекет-системы</option>
+                  <option value="kids">Детская стоматология</option>
+                  <option value="prosthetics">Протезирование</option>
+                  <option value="microscope">Лечение под микроскопом</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-doctor" class="form-label">Врач</label>
+                <select id="order-doctor" name="doctor" class="form-select">
+                  <option value="" selected>Не выбран</option>
+                  <option value="anna-ivanova">Анна Иванова – терапевт</option>
+                  <option value="sergey-petrov">Сергей Петров – хирург-имплантолог</option>
+                  <option value="elena-smirnova">Елена Смирнова – детский стоматолог</option>
+                  <option value="dmitry-kozlov">Дмитрий Козлов – ортопед</option>
+                  <option value="olga-novikova">Ольга Новикова – ортодонт</option>
+                  <option value="igor-morozov">Игорь Морозов – пародонтолог</option>
+                  <option value="natalia-volkova">Наталья Волкова – гигиенист</option>
+                  <option value="pavel-sokolov">Павел Соколов – эндодонтист</option>
+                </select>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="order-date" class="form-label">Желаемая дата</label>
+                <input id="order-date" name="date" type="date" class="form-control">
+              </div>
+              <div class="col-12">
+                <label for="order-comment" class="form-label">Комментарий</label>
+                <textarea id="order-comment" name="comment" class="form-control" rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input id="order-agree" class="form-check-input" type="checkbox" required>
+                  <label class="form-check-label" for="order-agree">Согласен на обработку данных *</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+          <button type="submit" form="orderForm" class="btn btn-clinic">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ПОДВАЛ -->
+  <footer class="bg-dark text-white-50 py-5 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <div class="d-flex align-items-center mb-3">
+            <span class="brand-mark brand-mark-dark me-2">БК</span>
+            <span class="fw-bold text-white">Белый ключ</span>
+          </div>
+          <p class="small mb-0">Стоматология для всей семьи. Лечение, имплантация и профилактика в Москве.</p>
+        </div>
+        <div class="col-6 col-md-2">
+          <h4 class="h6 text-white mb-3">Клиника</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Главная</a></li>
+            <li class="mb-2"><a href="catalog.html" class="text-white-50 text-decoration-none">Услуги</a></li>
+            <li class="mb-2"><a href="doctors.html" class="text-white-50 text-decoration-none">Врачи</a></li>
+            <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">О нас</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h4 class="h6 text-white mb-3">Контакты</h4>
+          <ul class="list-unstyled small">
+            <li class="mb-2">📍Москва, ул. Примерная, 12</li>
+            <li class="mb-2"><a href="tel:+74951234567" class="text-white-50 text-decoration-none">📞+7 (495) 123-45-67</a></li>
+            <li class="mb-2">🕒Ежедневно 9:00–21:00</li>
+            <li class="mb-2">✉️info@beliy-klyuch.ru</li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-3">
+          <h4 class="h6 text-white mb-3">Запись</h4>
+          <p class="small">Оставьте заявку – перезвоним в течение 15 минут.</p>
+          <button type="button" class="btn btn-clinic btn-sm"
+                  data-bs-toggle="modal" data-bs-target="#feedbackModal">
+            Записаться
+          </button>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="d-flex flex-column flex-md-row justify-content-between small">
+        <span>© 2026 Стоматология «Белый ключ». Все права защищены.</span>
+        <span>ИНН 1034958340 · Лицензия ЛО-23-95-839458</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    (function () {
+      const modal = document.getElementById('feedbackModal');
+      if (!modal) return;
+
+      modal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        if (!button) return;
+
+        const service = button.getAttribute('data-service');
+        const doctor = button.getAttribute('data-doctor');
+
+        if (service) {
+          const select = modal.querySelector('#order-service');
+          const opt = select?.querySelector(`option[value="${service}"]`);
+          if (opt) opt.selected = true;
+        }
+        if (doctor) {
+          const select = modal.querySelector('#order-doctor');
+          const opt = select?.querySelector(`option[value="${doctor}"]`);
+          if (opt) opt.selected = true;
+        }
+      });
+
+      const form = document.getElementById('orderForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const instance = bootstrap.Modal.getInstance(modal);
+          if (instance) instance.hide();
+          form.reset();
+
+          const toast = document.createElement('div');
+          toast.className = 'toast align-items-center text-bg-success border-0 position-fixed bottom-0 start-50 translate-middle-x mb-4';
+          toast.setAttribute('role', 'alert');
+          toast.innerHTML = '<div class="d-flex"><div class="toast-body">Спасибо! Заявка отправлена – перезвоним в течение 15 минут.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>';
+          document.body.appendChild(toast);
+          const bsToast = new bootstrap.Toast(toast, { delay: 4000 });
+          bsToast.show();
+          toast.addEventListener('hidden.bs.toast', () => toast.remove());
+        });
+      }
+    })();
+  </script>
+  <!-- ===== ЧАТ: КНОПКА ===== -->
+    <button class="btn btn-clinic rounded-circle position-fixed bottom-0 end-0 m-4 shadow chat-toggle"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#chatPanel"
+            aria-controls="chatPanel"
+            aria-label="Открыть чат с консультантом">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    </button>
+
+    <!-- ===== ЧАТ: ПАНЕЛЬ ===== -->
+    <div class="offcanvas offcanvas-end chat-panel"
+        tabindex="-1"
+        id="chatPanel"
+        aria-labelledby="chatPanelLabel">
+    <div class="offcanvas-header border-bottom">
+        <div class="d-flex align-items-center gap-2">
+        <span class="chat-avatar">К</span>
+        <div>
+            <h5 class="offcanvas-title mb-0" id="chatPanelLabel">Консультант</h5>
+            <small class="text-muted">Онлайн · отвечает за ~1 минуту</small>
+        </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column p-0">
+        <div class="flex-grow-1 p-3 chat-messages" id="chatMessages">
+        <div class="chat-msg chat-msg-bot mb-3">
+            <div class="chat-bubble">Здравствуйте! Чем могу помочь?</div>
+        </div>
+        <div class="chat-msg chat-msg-bot mb-3">
+            <div class="chat-bubble">Могу подсказать по услугам, ценам и записи на приём.</div>
+        </div>
+        </div>
+
+        <div class="border-top p-3">
+        <form id="chatForm" class="input-group">
+            <input type="text"
+                class="form-control"
+                id="chatInput"
+                placeholder="Напишите сообщение..."
+                autocomplete="off"
+                required>
+            <button class="btn btn-clinic" type="submit" aria-label="Отправить">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"
+                    stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </button>
+        </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- ===== МОДАЛКА ЗАПИСИ ===== -->
+    <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title h5" id="feedbackModalLabel">Запись на приём</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+            <p class="text-muted small mb-3">Оставьте контакты – перезвоним в течение 15 минут и подтвердим время.</p>
+            <form id="orderForm">
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                <label for="order-name" class="form-label">Имя *</label>
+                <input id="order-name" name="name" type="text" class="form-control" required>
+                </div>
+                <div class="col-12 col-md-6">
+                <label for="order-phone" class="form-label">Телефон *</label>
+                <div class="input-group">
+                    <span class="input-group-text">+7</span>
+                    <input id="order-phone" name="phone" type="tel" class="form-control" placeholder="900 000-00-00" required>
+                </div>
+                </div>
+                <div class="col-12 col-md-6">
+                <label for="order-email" class="form-label">E-mail</label>
+                <input id="order-email" name="email" type="email" class="form-control">
+                </div>
+                <div class="col-12 col-md-6">
+                <label for="order-service" class="form-label">Услуга</label>
+                <select id="order-service" name="service" class="form-select">
+                    <option value="" selected>Не выбрана</option>
+                    <option value="hygiene">Профессиональная гигиена</option>
+                    <option value="caries">Лечение кариеса</option>
+                    <option value="implant">Имплантация</option>
+                    <option value="whitening">Отбеливание зубов</option>
+                    <option value="braces">Брекет-системы</option>
+                    <option value="kids">Детская стоматология</option>
+                    <option value="prosthetics">Протезирование</option>
+                    <option value="microscope">Лечение под микроскопом</option>
+                </select>
+                </div>
+                <div class="col-12 col-md-6">
+                <label for="order-doctor" class="form-label">Врач</label>
+                <select id="order-doctor" name="doctor" class="form-select">
+                    <option value="" selected>Не выбран</option>
+                    <option value="anna-ivanova">Анна Иванова – терапевт</option>
+                    <option value="sergey-petrov">Сергей Петров – хирург-имплантолог</option>
+                    <option value="elena-smirnova">Елена Смирнова – детский стоматолог</option>
+                    <option value="dmitry-kozlov">Дмитрий Козлов – ортопед</option>
+                    <option value="olga-novikova">Ольга Новикова – ортодонт</option>
+                    <option value="igor-morozov">Игорь Морозов – пародонтолог</option>
+                    <option value="natalia-volkova">Наталья Волкова – гигиенист</option>
+                    <option value="pavel-sokolov">Павел Соколов – эндодонтист</option>
+                </select>
+                </div>
+                <div class="col-12 col-md-6">
+                <label for="order-date" class="form-label">Желаемая дата</label>
+                <input id="order-date" name="date" type="date" class="form-control">
+                </div>
+                <div class="col-12">
+                <label for="order-comment" class="form-label">Комментарий</label>
+                <textarea id="order-comment" name="comment" class="form-control" rows="3"></textarea>
+                </div>
+                <div class="col-12">
+                <div class="form-check">
+                    <input id="order-agree" class="form-check-input" type="checkbox" required>
+                    <label class="form-check-label" for="order-agree">Согласен на обработку данных *</label>
+                </div>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+            <button type="submit" form="orderForm" class="btn btn-clinic">Отправить</button>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ===== СКРИПТЫ ===== -->
+    <script>
+    /* 1. ТЁМНАЯ ТЕМА */
+    (function () {
+        const html = document.documentElement;
+        const STORAGE_KEY = 'beliy-klyuch-theme';
+
+        function applyTheme(theme) {
+        if (theme === 'auto') {
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            html.setAttribute('data-bs-theme', systemDark ? 'dark' : 'light');
+        } else {
+            html.setAttribute('data-bs-theme', theme);
+        }
+        }
+
+        const savedTheme = localStorage.getItem(STORAGE_KEY) || 'auto';
+        applyTheme(savedTheme);
+
+        document.querySelectorAll('[data-set-theme]').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const theme = btn.dataset.setTheme;
+            localStorage.setItem(STORAGE_KEY, theme);
+            applyTheme(theme);
+        });
+        });
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        if ((localStorage.getItem(STORAGE_KEY) || 'auto') === 'auto') {
+            applyTheme('auto');
+        }
+        });
+    })();
+
+    /* 2. ЧАТ */
+    (function () {
+        const form = document.getElementById('chatForm');
+        const input = document.getElementById('chatInput');
+        const messages = document.getElementById('chatMessages');
+        if (!form || !input || !messages) return;
+
+        const replies = [
+        'Спасибо! Уточню у администратора и вернусь с ответом.',
+        'Могу записать вас на приём. Удобно сегодня или завтра?',
+        'По ценам сориентирую: консультация – бесплатно, точная стоимость – после осмотра.',
+        'Если острая боль – позвоните нам: +7 (495) 123-45-67, примем в день обращения.'
+        ];
+
+        let i = 0;
+
+        function addMessage(text, who) {
+        const wrap = document.createElement('div');
+        wrap.className = 'chat-msg mb-3 ' + (who === 'user' ? 'chat-msg-user' : 'chat-msg-bot');
+        const bubble = document.createElement('div');
+        bubble.className = 'chat-bubble';
+        bubble.textContent = text;
+        wrap.appendChild(bubble);
+        messages.appendChild(wrap);
+        messages.scrollTop = messages.scrollHeight;
+        }
+
+        form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        const text = input.value.trim();
+        if (!text) return;
+        addMessage(text, 'user');
+        input.value = '';
+        setTimeout(function () {
+            addMessage(replies[i % replies.length], 'bot');
+            i++;
+        }, 800);
+        });
+    })();
+
+    /* 3. МОДАЛКА ЗАПИСИ: ПОДСТАНОВКА УСЛУГИ/ВРАЧА + ОТПРАВКА */
+    (function () {
+        const modal = document.getElementById('feedbackModal');
+        if (!modal) return;
+
+        modal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+        if (!button) return;
+
+        const service = button.getAttribute('data-service');
+        const doctor = button.getAttribute('data-doctor');
+
+        if (service) {
+            const select = modal.querySelector('#order-service');
+            const opt = select?.querySelector(`option[value="${service}"]`);
+            if (opt) opt.selected = true;
+        }
+        if (doctor) {
+            const select = modal.querySelector('#order-doctor');
+            const opt = select?.querySelector(`option[value="${doctor}"]`);
+            if (opt) opt.selected = true;
+        }
+        });
+
+        const form = document.getElementById('orderForm');
+        if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const instance = bootstrap.Modal.getInstance(modal);
+            if (instance) instance.hide();
+            form.reset();
+
+            const toast = document.createElement('div');
+            toast.className = 'toast align-items-center text-bg-success border-0 position-fixed bottom-0 start-50 translate-middle-x mb-4';
+            toast.setAttribute('role', 'alert');
+            toast.innerHTML = '<div class="d-flex"><div class="toast-body">Спасибо! Заявка отправлена – перезвоним в течение 15 минут.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button></div>';
+            document.body.appendChild(toast);
+            const bsToast = new bootstrap.Toast(toast, { delay: 4000 });
+            bsToast.show();
+            toast.addEventListener('hidden.bs.toast', () => toast.remove());
+        });
+        }
+    })();
+    </script>
+    <script>
+    (function () {
+        const items = document.querySelectorAll('.reveal');
+        if (!items.length) return;
+
+        // Если браузер не поддерживает IntersectionObserver — показываем всё сразу
+        if (!('IntersectionObserver' in window)) {
+        items.forEach(el => el.classList.add('is-visible'));
+        return;
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // анимируем один раз
+            }
+        });
+        }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+        });
+
+        items.forEach(el => observer.observe(el));
+    })();
+    </script>
+    <script>
+  (function () {
+    const counters = document.querySelectorAll('.count');
+    if (!counters.length) return;
+
+    // Форматирование: 15000 → "15 000", 4.9 → "4,9"
+    function format(value, decimals, suffix) {
+      const fixed = decimals > 0
+        ? value.toFixed(decimals).replace('.', ',')
+        : Math.round(value).toString();
+      const withSpaces = fixed.replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+      return withSpaces + (suffix || '');
+    }
+
+    function animate(el) {
+      const target = parseFloat(el.dataset.count);
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400; // мс
+      const start = performance.now();
+
+      function frame(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        // easeOutCubic — плавное замедление к концу
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = target * eased;
+        el.textContent = format(current, decimals, suffix);
+
+        if (progress < 1) {
+          requestAnimationFrame(frame);
+        } else {
+          el.textContent = format(target, decimals, suffix);
+        }
+      }
+
+      requestAnimationFrame(frame);
+    }
+
+    // Если браузер не поддерживает IO — просто ставим конечные значения
+    if (!('IntersectionObserver' in window)) {
+      counters.forEach(el => {
+        const target = parseFloat(el.dataset.count);
+        const decimals = parseInt(el.dataset.decimals || '0', 10);
+        el.textContent = format(target, decimals, el.dataset.suffix || '');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animate(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    counters.forEach(el => observer.observe(el));
+  })();
+</script>
+</body>
+</html>
