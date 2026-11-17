@@ -3,6 +3,7 @@
    Палитра, компоненты, карточки, врачи, карусель, галерея
    ========================================================= */
 
+/* ---------- Переменные ---------- */
 :root {
   --clinic: #0ea5b7;
   --clinic-dark: #0f766e;
@@ -58,7 +59,45 @@ body {
 
 /* ---------- Hero ---------- */
 .hero-section {
-  background: linear-gradient(180deg, var(--clinic-light) 0%, #ffffff 100%);
+  position: relative;
+  background-color: var(--clinic-light);
+  transition: background-color .6s ease;
+}
+
+.hero-section::before,
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: opacity .6s ease;
+  z-index: 0;
+}
+
+.hero-section::before {
+  background: linear-gradient(180deg, transparent 0%, #ffffff 100%);
+  opacity: 1;
+}
+
+.hero-section::after {
+  background: linear-gradient(180deg, #16282b 0%, transparent 100%);
+  opacity: 0;
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Тёмная тема */
+[data-bs-theme="dark"] .hero-section {
+  background-color: var(--bs-body-bg);
+}
+[data-bs-theme="dark"] .hero-section::before {
+  opacity: 0;
+}
+[data-bs-theme="dark"] .hero-section::after {
+  opacity: 1;
 }
 
 .hero-img {
@@ -116,7 +155,7 @@ body {
   font-size: .9rem;
 }
 
-/* ---------- Врачи: фото строго 110×110 ---------- */
+/* ---------- Врачи: фото 110×110 ---------- */
 .doctor-card {
   overflow: hidden;
 }
@@ -136,7 +175,6 @@ body {
   box-shadow: 0 4px 12px rgba(15, 118, 110, .12);
 }
 
-/* Вариант с обёрткой (если используется) */
 .doctor-photo-wrap {
   width: 110px;
   height: 110px;
@@ -177,7 +215,6 @@ body {
   flex-direction: column;
 }
 
-/* Фиксируем высоту слайдов, чтобы страница не прыгала */
 #reviewsCarousel .carousel-item {
   min-height: 260px;
 }
@@ -188,7 +225,52 @@ body {
   }
 }
 
-/* Стрелки карусели отзывов */
+.review-stars {
+  color: #f5b301;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.review-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: var(--clinic-dark);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  box-shadow: 0 6px 18px rgba(15, 118, 110, .15);
+  transition: background .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease;
+}
+.review-btn:hover,
+.review-btn:focus-visible {
+  background: var(--clinic);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(15, 118, 110, .28);
+  outline: none;
+}
+.review-btn:active {
+  transform: scale(.94);
+}
+
+.review-btn-side {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, .15);
+}
+.review-btn-prev { left: -16px; }
+.review-btn-next { right: -16px; }
+
+@media (max-width: 767.98px) {
+  .review-btn-side { display: none; }
+}
+
 .review-control {
   width: 40px;
   opacity: 1;
@@ -255,7 +337,6 @@ body {
   object-fit: cover;
 }
 
-/* Аккуратные таблицы */
 .table th {
   width: 30%;
   font-weight: 600;
@@ -267,182 +348,13 @@ body {
   .placeholder-box { min-height: 220px; }
 }
 
-.review-btn-side {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-  box-shadow: 0 4px 12px rgba(15, 118, 110, .15);
-}
-.review-btn-prev { left: -16px; }
-.review-btn-next { right: -16px; }
-
-@media (max-width: 767.98px) {
-  .review-btn-side { display: none; } /* на мобильном прячем, листание свайпом/точками */
-}
-
-.review-btn {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: none;
-  background: #fff;
-  color: var(--clinic-dark);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  box-shadow: 0 6px 18px rgba(15, 118, 110, .15);
-  transition: background .18s ease, color .18s ease, transform .12s ease, box-shadow .18s ease;
-}
-
-.review-btn:hover,
-.review-btn:focus-visible {
-  background: var(--clinic);
-  color: #fff;
-  box-shadow: 0 8px 22px rgba(15, 118, 110, .28);
-  outline: none;
-}
-
-.review-btn:active {
-  transform: scale(.94);
-}
-
-/* === Тёмная тема: принудительные исправления === */
-[data-bs-theme="dark"] header,
-[data-bs-theme="dark"] nav.navbar {
-  background-color: var(--bs-body-bg) !important;
-  border-color: var(--bs-border-color) !important;
-}
-
-[data-bs-theme="dark"] .doctor-card,
-[data-bs-theme="dark"] .feature-card,
-[data-bs-theme="dark"] .review-card,
-[data-bs-theme="dark"] .service-card {
-  background-color: var(--bs-body-bg) !important;
-  border-color: var(--bs-border-color) !important;
-}
-
-[data-bs-theme="dark"] .bg-light,
-[data-bs-theme="dark"] .bg-white {
-  background-color: var(--bs-body-bg) !important;
-}
-
-[data-bs-theme="dark"] .text-dark,
-[data-bs-theme="dark"] .text-black {
-  color: var(--bs-body-color) !important;
-}
-
-/* Hero и любые блоки с картинкой здания */
-[data-bs-theme="dark"] .hero-section {
-  background: linear-gradient(180deg, #16282b 0%, var(--bs-body-bg) 100%) !important;
-}
-
-[data-bs-theme="dark"] .hero-img {
-  filter: brightness(.85);
-}
-
-[data-bs-theme="dark"] .placeholder-box,
-[data-bs-theme="dark"] .placeholder-image,
-[data-bs-theme="dark"] .gallery-item,
-[data-bs-theme="dark"] .card-img-placeholder {
-  background-color: var(--bs-secondary-bg) !important;
-  border-color: var(--bs-border-color) !important;
-  color: var(--bs-secondary-color) !important;
-}
-
-[data-bs-theme="dark"] .text-dark,
-[data-bs-theme="dark"] .text-black,
-[data-bs-theme="dark"] .text-black-50 {
-  color: var(--bs-body-color) !important;
-}
-
-[data-bs-theme="dark"] body,
-[data-bs-theme="dark"] h1,
-[data-bs-theme="dark"] h2,
-[data-bs-theme="dark"] h3,
-[data-bs-theme="dark"] h4,
-[data-bs-theme="dark"] h5,
-[data-bs-theme="dark"] h6,
-[data-bs-theme="dark"] p,
-[data-bs-theme="dark"] li,
-[data-bs-theme="dark"] span,
-[data-bs-theme="dark"] small,
-[data-bs-theme="dark"] a:not(.btn) {
-  color: var(--bs-body-color);
-}
-
-/* === Тёмная тема: финальная страховка === */
-[data-bs-theme="dark"] .bg-white,
-[data-bs-theme="dark"] .bg-light,
-[data-bs-theme="dark"] .bg-body-tertiary {
-  background-color: var(--bs-body-bg) !important;
-}
-
-[data-bs-theme="dark"] .card,
-[data-bs-theme="dark"] .doctor-card,
-[data-bs-theme="dark"] .feature-card,
-[data-bs-theme="dark"] .review-card,
-[data-bs-theme="dark"] .service-card,
-[data-bs-theme="dark"] .modal-content,
-[data-bs-theme="dark"] .offcanvas {
-  background-color: var(--bs-body-bg) !important;
-  color: var(--bs-body-color) !important;
-  border-color: var(--bs-border-color) !important;
-}
-
-[data-bs-theme="dark"] .text-dark,
-[data-bs-theme="dark"] .text-black,
-[data-bs-theme="dark"] .text-muted {
-  color: var(--bs-secondary-color) !important;
-}
-
-[data-bs-theme="dark"] .hero-section {
-  background: linear-gradient(180deg, #16282b 0%, var(--bs-body-bg) 100%) !important;
-}
-
-[data-bs-theme="dark"] .placeholder-box,
-[data-bs-theme="dark"] .placeholder-image,
-[data-bs-theme="dark"] .gallery-item,
-[data-bs-theme="dark"] .card-img-placeholder {
-  background-color: var(--bs-secondary-bg) !important;
-  border-color: var(--bs-border-color) !important;
-  color: var(--bs-secondary-color) !important;
-}
-
-[data-bs-theme="dark"] .urgent-bar {
-  background-color: #2a2318 !important;
-  border-color: #4a3f2a !important;
-  color: var(--bs-body-color) !important;
-}
-
-[data-bs-theme="dark"] .urgent-bar .text-muted {
-  color: var(--bs-secondary-color) !important;
-}
-
-[data-bs-theme="dark"] .urgent-bar .btn-warning {
-  color: #1a1a1a;
-}
-
-[data-bs-theme="dark"] .feature-card,
-[data-bs-theme="dark"] .review-card,
-[data-bs-theme="dark"] .service-card {
-  border: 1px solid var(--bs-border-color) !important;
-}
-
-[data-bs-theme="dark"] .doctor-card {
-  background-color: var(--bs-body-bg) !important;
-  border: 1px solid #2c3034 !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .35) !important;
-}
-
+/* ---------- Врачи: точки карусели ---------- */
 .doctors-controls .carousel-indicators {
   position: static;
   margin: 0;
   display: flex;
   gap: .4rem;
 }
-
 .doctors-controls .carousel-indicators [data-bs-target] {
   width: 10px;
   height: 10px;
@@ -452,125 +364,12 @@ body {
   opacity: 1;
   transition: background .15s ease, transform .15s ease;
 }
-
 .doctors-controls .carousel-indicators .active {
   background-color: var(--clinic);
   transform: scale(1.2);
 }
 
-[data-bs-theme="dark"] .doctors-controls .carousel-indicators [data-bs-target] {
-  background-color: #3a4247;
-}
-
-[data-bs-theme="dark"] .doctors-controls .carousel-indicators .active {
-  background-color: var(--clinic);
-}
-
-[data-bs-theme="dark"] .review-btn {
-  background-color: var(--bs-secondary-bg) !important;
-  color: var(--bs-body-color) !important;
-  border: 1px solid var(--bs-border-color) !important;
-  box-shadow: none !important;
-}
-
-[data-bs-theme="dark"] .review-btn:hover,
-[data-bs-theme="dark"] .review-btn:focus-visible {
-  background-color: var(--clinic) !important;
-  color: #fff !important;
-}
-
-[data-bs-theme="dark"] .ratio iframe,
-[data-bs-theme="dark"] iframe[src*="yandex"] {
-  filter: brightness(.92) contrast(1.03);
-}
-
-/* ===== Виджет чата ===== */
-.chat-toggle {
-  width: 60px;
-  height: 60px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1050;
-  padding: 0;
-}
-
-.chat-panel {
-  width: 380px !important;
-}
-
-@media (max-width: 575.98px) {
-  .chat-panel { width: 100% !important; }
-  .chat-toggle { width: 54px; height: 54px; margin: 1rem !important; }
-}
-
-.chat-avatar {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: var(--clinic);
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
-
-.chat-messages {
-  overflow-y: auto;
-  max-height: calc(100vh - 180px);
-}
-
-.chat-msg {
-  display: flex;
-}
-
-.chat-msg-user {
-  justify-content: flex-end;
-}
-
-.chat-bubble {
-  max-width: 80%;
-  padding: .55rem .8rem;
-  border-radius: 14px;
-  font-size: .92rem;
-  line-height: 1.4;
-}
-
-.chat-msg-bot .chat-bubble {
-  background: var(--bs-secondary-bg);
-  color: var(--bs-body-color);
-  border-top-left-radius: 4px;
-}
-
-.chat-msg-user .chat-bubble {
-  background: var(--clinic);
-  color: #fff;
-  border-top-right-radius: 4px;
-}
-
-/* Тёмная тема */
-[data-bs-theme="dark"] .chat-msg-bot .chat-bubble {
-  background: #2c3034;
-}
-
-.feature-step {
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: var(--clinic-light);
-  color: var(--clinic-dark);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-}
-
-[data-bs-theme="dark"] .feature-step {
-  background: #2c3034;
-  color: var(--clinic);
-}
-
+/* ---------- Шаги / числа ---------- */
 .feature-step {
   width: 36px;
   height: 36px;
@@ -584,23 +383,7 @@ body {
   font-size: .9rem;
 }
 
-[data-bs-theme="dark"] .feature-step {
-  background: #2c3034;
-  color: var(--clinic);
-}
-
-.review-stars {
-  color: #f5b301;
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  line-height: 1;
-}
-
-[data-bs-theme="dark"] .review-stars {
-  color: #ffc93c;
-}
-
-/* ===== Виджет чата ===== */
+/* ---------- Виджет чата ---------- */
 .chat-toggle {
   width: 60px;
   height: 60px;
@@ -611,11 +394,9 @@ body {
   padding: 0;
 }
 
-.chat-panel { width: 380px !important; }
-
-@media (max-width: 575.98px) {
-  .chat-panel { width: 100% !important; }
-  .chat-toggle { width: 54px; height: 54px; margin: 1rem !important; }
+.chat-panel {
+  width: 380px !important;
+  z-index: 1060;
 }
 
 .chat-avatar {
@@ -658,27 +439,290 @@ body {
   border-top-right-radius: 4px;
 }
 
-[data-bs-theme="dark"] .chat-msg-bot .chat-bubble {
-  background: #2c3034;
+@media (max-width: 575.98px) {
+  .chat-panel { width: 100% !important; }
+  .chat-toggle { width: 54px; height: 54px; margin: 1rem !important; }
 }
 
-/* ===== Анимация появления (about.html) ===== */
+/* ---------- Анимация появления ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity .6s ease, transform .6s ease;
   will-change: opacity, transform;
 }
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
 
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.count {
+  font-variant-numeric: tabular-nums;
+  min-height: 1em;
+}
+
+/* =========================================================
+   ТЁМНАЯ ТЕМА
+   ========================================================= */
+
+[data-bs-theme="dark"] header,
+[data-bs-theme="dark"] nav.navbar {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .doctor-card,
+[data-bs-theme="dark"] .feature-card,
+[data-bs-theme="dark"] .review-card,
+[data-bs-theme="dark"] .service-card,
+[data-bs-theme="dark"] .card,
+[data-bs-theme="dark"] .modal-content,
+[data-bs-theme="dark"] .offcanvas {
+  background-color: var(--bs-body-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .bg-white,
+[data-bs-theme="dark"] .bg-body-tertiary {
+  background-color: var(--bs-body-bg) !important;
+}
+
+[data-bs-theme="dark"] .text-dark,
+[data-bs-theme="dark"] .text-black,
+[data-bs-theme="dark"] .text-black-50,
+[data-bs-theme="dark"] .text-muted {
+  color: var(--bs-secondary-color) !important;
+}
+
+[data-bs-theme="dark"] body,
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4,
+[data-bs-theme="dark"] h5,
+[data-bs-theme="dark"] h6,
+[data-bs-theme="dark"] p,
+[data-bs-theme="dark"] li,
+[data-bs-theme="dark"] span,
+[data-bs-theme="dark"] small,
+[data-bs-theme="dark"] a:not(.btn) {
+  color: var(--bs-body-color);
+}
+
+[data-bs-theme="dark"] .hero-img {
+  filter: brightness(.85);
+}
+
+[data-bs-theme="dark"] .placeholder-box,
+[data-bs-theme="dark"] .placeholder-image,
+[data-bs-theme="dark"] .gallery-item,
+[data-bs-theme="dark"] .card-img-placeholder {
+  background-color: var(--bs-secondary-bg) !important;
+  border-color: var(--bs-border-color) !important;
+  color: var(--bs-secondary-color) !important;
+}
+
+[data-bs-theme="dark"] .urgent-bar {
+  background-color: #2a2318 !important;
+  border-color: #4a3f2a !important;
+  color: var(--bs-body-color) !important;
+}
+[data-bs-theme="dark"] .urgent-bar .text-muted {
+  color: var(--bs-secondary-color) !important;
+}
+[data-bs-theme="dark"] .urgent-bar .btn-warning {
+  color: #1a1a1a;
+}
+
+[data-bs-theme="dark"] .feature-card,
+[data-bs-theme="dark"] .review-card,
+[data-bs-theme="dark"] .service-card {
+  border: 1px solid var(--bs-border-color) !important;
+}
+
+[data-bs-theme="dark"] .doctor-card {
+  background-color: var(--bs-body-bg) !important;
+  border: 1px solid #2c3034 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .35) !important;
+}
+
+[data-bs-theme="dark"] .doctors-controls .carousel-indicators [data-bs-target] {
+  background-color: #3a4247;
+}
+[data-bs-theme="dark"] .doctors-controls .carousel-indicators .active {
+  background-color: var(--clinic);
+}
+
+[data-bs-theme="dark"] .review-btn {
+  background-color: var(--bs-secondary-bg) !important;
+  color: var(--bs-body-color) !important;
+  border: 1px solid var(--bs-border-color) !important;
+  box-shadow: none !important;
+}
+[data-bs-theme="dark"] .review-btn:hover,
+[data-bs-theme="dark"] .review-btn:focus-visible {
+  background-color: var(--clinic) !important;
+  color: #fff !important;
+}
+
+[data-bs-theme="dark"] .review-stars {
+  color: #ffc93c;
+}
+
+[data-bs-theme="dark"] .chat-msg-bot .chat-bubble {
+  background: #2c3034;
+}
+
+[data-bs-theme="dark"] .feature-step {
+  background: #2c3034;
+  color: var(--clinic);
+}
+
+[data-bs-theme="dark"] .ratio iframe,
+[data-bs-theme="dark"] iframe[src*="yandex"] {
+  filter: brightness(.92) contrast(1.03);
+}
+
+/* =========================================================
+   ПЛАВНЫЙ ПЕРЕХОД ТЕМЫ
+   ========================================================= */
+
+html,
+body,
+header,
+nav.navbar,
+footer,
+main,
+section,
+.card,
+.card-body,
+.card-header,
+.card-footer,
+.feature-card,
+.review-card,
+.service-card,
+.doctor-card,
+.modal-content,
+.modal-header,
+.modal-footer,
+.offcanvas,
+.offcanvas-header,
+.offcanvas-body,
+.dropdown-menu,
+.alert,
+.urgent-bar,
+.hero-section,
+.table,
+.table > :not(caption) > * > *,
+.accordion,
+.accordion-item,
+.accordion-button,
+.accordion-body,
+.breadcrumb,
+.breadcrumb-item,
+.form-control,
+.form-select,
+.input-group-text,
+.list-group-item,
+.bg-body,
+.bg-body-tertiary,
+.bg-dark,
+.bg-white,
+.bg-light,
+.placeholder-box,
+.placeholder-image,
+.gallery-item,
+.chat-bubble,
+.chat-panel,
+.toast,
+h1, h2, h3, h4, h5, h6,
+p, li, span, small, a:not(.btn),
+th, td, label, legend {
+  transition:
+    background .6s ease,
+    background-color .6s ease,
+    color .6s ease,
+    border-color .6s ease;
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  display: none;
+}
+[data-bs-theme="light"] .theme-toggle .icon-moon { display: inline-block; }
+[data-bs-theme="dark"]  .theme-toggle .icon-sun  { display: inline-block; }
+html:not([data-bs-theme]) .theme-toggle .icon-moon { display: inline-block; }
+
+html.no-transition,
+html.no-transition * {
+  transition: none !important;
+}
+
+/* 2. Пульс кнопки чата */
+@keyframes chat-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 183, .45);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(14, 165, 183, 0);
+  }
+}
+
+.chat-toggle {
+  animation: chat-pulse 2.8s ease-out infinite;
+}
+
+/* На тёмной теме — чуть ярче */
+[data-bs-theme="dark"] .chat-toggle {
+  animation-name: chat-pulse-dark;
+}
+@keyframes chat-pulse-dark {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 183, .6);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(14, 165, 183, 0);
+  }
+}
+
+/* Уважаем reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .chat-toggle { animation: none; }
+}
+
+/* =========================================================
+   АНИМАЦИИ
+   ========================================================= */
+
+/* 1. Появление при прокрутке */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+  will-change: opacity, transform;
+}
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Задержки для каскада */
-.reveal-delay-1 { transition-delay: .1s; }
-.reveal-delay-2 { transition-delay: .2s; }
-.reveal-delay-3 { transition-delay: .3s; }
+/* Каскад: задержка по индексу (ставится через style="--i: N") */
+.reveal {
+  transition-delay: calc(var(--i, 0) * 80ms);
+}
 
 /* Уважаем настройку «уменьшить движение» */
 @media (prefers-reduced-motion: reduce) {
@@ -689,8 +733,192 @@ body {
   }
 }
 
-/* Числа-счётчики */
-.count {
-  font-variant-numeric: tabular-nums; /* чтобы ширина не «прыгала» */
-  min-height: 1em;
+/* =========================================================
+   MOTION: модалка записи
+   Backdrop — родной Bootstrap (не трогаем).
+   Анимируем только диалог: подъём + масштаб + проявление.
+   ========================================================= */
+
+:root {
+  --modal-ease: cubic-bezier(.22, 1, .36, 1);
+  --modal-duration: .42s;
+}
+
+.modal.fade .modal-dialog {
+  transform: translateY(24px) scale(.96);
+  opacity: 0;
+  transition:
+    transform var(--modal-duration) var(--modal-ease),
+    opacity var(--modal-duration) var(--modal-ease);
+}
+.modal.show .modal-dialog {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Контент — статичная тень, без transition */
+.modal-content {
+  border: 1px solid #e5eef0;
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, .04),
+    0 24px 64px rgba(15, 23, 42, .18);
+}
+
+[data-bs-theme="dark"] .modal-content {
+  border-color: #2c3034;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, .3),
+    0 24px 64px rgba(0, 0, 0, .55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal.fade .modal-dialog {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   MOTION: тост «Заявка отправлена»
+   Собственная реализация, без Bootstrap Toast.
+   ========================================================= */
+
+.toast-container {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  z-index: 1090;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  pointer-events: none;
+}
+
+.toast-custom {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  min-width: 280px;
+  max-width: 90vw;
+  padding: .75rem 1rem;
+  border-radius: 12px;
+  background: #16a34a;
+  color: #fff;
+  font-size: .95rem;
+  line-height: 1.35;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, .08),
+    0 16px 40px rgba(0, 0, 0, .18);
+
+  opacity: 0;
+  transform: translateY(16px) scale(.96);
+  transition:
+    opacity .35s cubic-bezier(.22, 1, .36, 1),
+    transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+.toast-custom.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.toast-custom-body {
+  flex: 1 1 auto;
+}
+
+.toast-custom-close {
+  flex: 0 0 auto;
+  background: none;
+  border: 0;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0 .25rem;
+  opacity: .8;
+  cursor: pointer;
+}
+.toast-custom-close:hover {
+  opacity: 1;
+}
+
+/* Тёмная тема */
+[data-bs-theme="dark"] .toast-custom {
+  background: #15803d;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, .35),
+    0 16px 40px rgba(0, 0, 0, .55);
+}
+
+/* Уважаем «уменьшить движение» */
+@media (prefers-reduced-motion: reduce) {
+  .toast-custom {
+    transition: none;
+    transform: none;
+  }
+}
+
+/* =========================================================
+   MOTION: кнопка «Записаться» в hero
+   ========================================================= */
+
+.hero-cta {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;                 /* ← гарантирует, что ::before не уйдёт под фон */
+  box-shadow: 0 4px 14px rgba(15, 118, 110, .18);
+  transition:
+    box-shadow .35s cubic-bezier(.22, 1, .36, 1),
+    transform .35s cubic-bezier(.22, 1, .36, 1);
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  box-shadow: 0 8px 24px rgba(15, 118, 110, .28);
+  transform: translateY(-1px);
+}
+
+.hero-cta::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, .45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-18deg);
+  pointer-events: none;
+  z-index: 1;                          /* ← поверх фона кнопки */
+  animation: hero-cta-shine 4.5s ease-in-out infinite;
+}
+
+@keyframes hero-cta-shine {
+  0%, 60% { left: -60%; }
+  100% { left: 120%; }
+}
+
+/* Тёмная тема — блик ярче и с явным animation */
+[data-bs-theme="dark"] .hero-cta::before {
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, .55) 50%,
+    transparent 100%
+  );
+  animation: hero-cta-shine 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta { transition: none; }
+  .hero-cta::before {
+    animation: none;
+    display: none;
+  }
 }
